@@ -1,0 +1,159 @@
+#incsec{
+            background-color: black;
+        }
+
+        .main {
+            height: fit-content;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .leftinclude {
+            width: 50%;
+            margin: auto;
+        }
+
+        .rightinclude {
+            width: 50%;
+        }
+
+        .box3 {
+            border-radius: 15px;
+            padding: 30px;
+            margin: auto;
+            text-align: left;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            width: 80%;
+            height: auto; /* Changed from 80vh to auto to fit content */
+            min-height: 80vh; /* Ensures minimum height for larger screens */
+            overflow: auto; /* Handles overflow content */
+        }
+
+        .box3 h3 {
+            font-size: 1.9em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .box3 .subtitle {
+            font-size: 1.3em;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: grey;
+        }
+
+        .box3 ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        .box3 ul li {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 1em;
+            color: white;
+        }
+
+        .box3 ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 15px;
+            height: 15px;
+            background-color: #28a745;
+            border-radius: 50%;
+        }
+
+        .box3 .cta-button {
+            background-color: white;
+            color: white;
+            border: 3px solid black;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button {
+            margin-top: 50px;
+            align-self: baseline;
+        }
+
+        .box3 .cta-button:hover {
+            background-color: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive design for mobile devices */
+        @media screen and (max-width: 768px) {
+            .main {
+                flex-direction: column; /* Stack left and right includes vertically */
+            }
+
+            .leftinclude, .rightinclude {
+                width: 100%; /* Full width on mobile */
+            }
+
+            .box3 {
+                width: 90%; /* Slightly wider on mobile */
+                padding: 20px; /* Reduced padding for smaller screens */
+                min-height: auto; /* Allow natural height */
+            }
+
+            .box3 .subtitle {
+                font-size: 1.1em; /* Smaller subtitle font */
+            }
+
+            .box3 ul li {
+                font-size: 0.9em; /* Smaller list item font */
+                padding-left: 20px; /* Adjust bullet spacing */
+            }
+
+            .box3 ul li::before {
+                width: 12px; /* Smaller bullet */
+                height: 12px;
+                top: 3px;
+            }
+
+            .cta-button {
+                padding: 10px 20px; /* Smaller button padding */
+                font-size: 0.9em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .box3 {
+                width: 95%; /* Almost full width for very small screens */
+                padding: 15px;
+            }
+
+            .box3 .subtitle {
+                font-size: 1em;
+            }
+
+            .box3 ul li {
+                font-size: 0.85em;
+                margin-bottom: 10px;
+            }
+        }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+       <script src="script.js" defer></script>
+       <link rel="stylesheet" href="exempelfade.css">
+         <link rel="stylesheet" href="recomend.css">
+         <script src="exempel.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <title>Business Web Solutions</title>
+  </head>
+  <body>
+    <header>
+      <a id="Contact" class="navigation" href="index.html#form">Contact</a>
+      <a id="Start"  class="navigation " href="index.html">Start</a>
+      <a id="Exempels" class="navigation selected" href="#">Exempels</a>
+    </header>
+
+    
+<!-- class="dontshow -->
+<article id="mobileversion" >
+  <div class="example">
+    <section class="scroll-section"><pre>Exempels</pre></section>
+<section class="scroll-section"> <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp1.png"> <img src="images/mob1.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture> </pre> </section>
+
+<section class="scroll-section"> <pre>Menus</pre></section>
+<section class="scroll-section"> <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp2.png"> <img src="images/mob2.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture></pre> </section>
+
+<section class="scroll-section"><pre>Contact</pre></section>
+<section class="scroll-section"> <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp3.png"> <img src="images/mob3.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture> </pre> </section>
+
+</div>
+
+
+<script type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+    inView(".scroll-section pre", (element) => {
+        animate(
+            element,
+            { opacity: 1, x: [-100, 0] },
+            {
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+            }
+        )
+
+        return () => animate(element, { opacity: 0, x: -100 })
+    })
+</script>
+</article>
+
+<div id="scrollto" style="height: 100vh; width: 100vw;">
+
+
+</div>
+
+    
+</body>
+</html>
