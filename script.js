@@ -87,7 +87,7 @@ setInterval(header,500);
 
                 for (let i = 0; i < elements.length; i++) {
                     elements[i].classList.add('visible');
-                    await new Promise(resolve => setTimeout(resolve, 500)); // 1-second delay
+                    await new Promise(resolve => setTimeout(resolve, 100)); // 0.1-second delay
                 }
 
                 isFading = false;
