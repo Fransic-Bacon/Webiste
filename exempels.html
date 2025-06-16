@@ -29,48 +29,6 @@
       <a id="Exempels" class="navigation selected" href="#">Exempels</a>
     </header>
 
-    <!-- class="dontshow -->
-    <article id="mobileversion">
-      <div class="example">
-        <section class="scroll-section"><pre>Exempels</pre></section>
-        <section class="scroll-section">
-          <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp1.png"> <img src="images/mob1.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture> </pre>
-        </section>
-
-        <section class="scroll-section"><pre>Menus</pre></section>
-        <section class="scroll-section">
-          <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp2.png"> <img src="images/mob2.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture></pre>
-        </section>
-
-        <section class="scroll-section"><pre>Contact</pre></section>
-        <section class="scroll-section">
-          <pre> <picture> <source media="(min-width: 769px)" srcset="images/comp3.png"> <img src="images/mob3.png"  style="width:fit-content; height: 100vh; flex-wrap: wrap;" alt=""> </picture> </pre>
-        </section>
-      </div>
-
-      <script type="module">
-        import {
-          animate,
-          inView,
-        } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm";
-
-        inView(".scroll-section pre", (element) => {
-          animate(
-            element,
-            { opacity: 1, x: [-100, 0] },
-            {
-              duration: 0.9,
-              easing: [0.17, 0.55, 0.55, 1],
-            }
-          );
-
-          return () => animate(element, { opacity: 0, x: -100 });
-        });
-      </script>
-    </article>
-
-    <div id="scrollto" style="height: 15vh; width: 100vw"></div>
-
     <!-- Detailed Section -->
    <section>
   <div id="restaurant-details" class="details-box">
@@ -101,7 +59,8 @@
         <div class="contact-section">
           <h3>Interested?</h3>
           <p>Send us an email or reach out directly via the contact page.</p>
-          <a href="index.html#form" class="cta-button2" >Go to Contact</a>
+          <!-- <a href="index.html#form" class="cta-button2" >Go to Contact</a> -->
+          <a href="resturaunt.html" class="cta-button2" >Go to Contact</a>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@
 }
 
 .leftside > img{
-    width: 95%;
+    width: fit-content;
 }
 
 .rightside{
